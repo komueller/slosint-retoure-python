@@ -45,6 +45,5 @@ def get_all_attachments_from_bytes(mail_bytes) -> List:
 
             print(f"Filename of attachment: {part.get_filename()}")
             result.append(part.get_payload(decode=True))
-            # result.append(part.as_string())
 
     return result
