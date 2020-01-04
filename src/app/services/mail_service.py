@@ -1,9 +1,9 @@
 from typing import List
 import email
 
-from app.aws import s3
-from app.infrastructure import constants
-from app.infrastructure.errors import (
+from ..aws import s3
+from ..infrastructure import constants
+from ..infrastructure.errors import (
     MailAttachmentNotFoundError,
     TooManyMailAttachmentsError,
 )

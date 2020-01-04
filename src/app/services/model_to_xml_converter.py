@@ -1,7 +1,7 @@
 from typing import List
 from xml.etree import ElementTree
 
-from app.model.retoure_model import RetoureModel
+from ..model.retoure_model import RetoureModel
 
 
 class ModelToXmlConverter:

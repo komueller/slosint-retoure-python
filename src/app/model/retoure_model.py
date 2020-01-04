@@ -1,4 +1,4 @@
-from app.model.product_model import ProductModel
+from .product_model import ProductModel
 
 
 class RetoureModel:

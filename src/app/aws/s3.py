@@ -2,7 +2,7 @@ import os
 
 import boto3
 
-from app.infrastructure import constants
+from ..infrastructure import constants
 
 
 def get_file(filename: str):

@@ -4,9 +4,9 @@ import traceback
 
 import xlrd
 
-from app.model.product_model import ProductModel
-from app.model.retoure_model import RetoureModel
-from app.services.excel_column import ExcelColumn
+from ..model.product_model import ProductModel
+from ..model.retoure_model import RetoureModel
+from .excel_column import ExcelColumn
 
 
 class ExcelToModelConverter:
