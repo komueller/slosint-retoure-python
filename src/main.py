@@ -5,6 +5,7 @@ from typing import Dict
 from app.services import mail_service
 from app.services.excel_to_model_converter import ExcelToModelConverter
 from app.services.model_to_xml_converter import ModelToXmlConverter
+from app.aws import sns
 
 
 def lambda_handler(event: Dict, *args) -> str:
@@ -29,6 +30,7 @@ def start_convert(message_id: str):
     xml = ModelToXmlConverter().convert(retoure_models)
 
     print("\nGenerated xml:\n" + "\n\n".join(xml))
+    [sns.publish(retoure) for retoure in xml]
 
 
 if __name__ == "__main__":

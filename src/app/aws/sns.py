@@ -12,7 +12,8 @@ def publish(retoure_xml: str):
     try:
         sns = _get_sns()
         sns.publish(
-            os.environ[constants.AWS_SNS_TOPIC_ARN_ENV_NAME], Message=retoure_xml
+            TopicArn=os.environ[constants.AWS_SNS_TOPIC_ARN_ENV_NAME],
+            Message=retoure_xml,
         )
     except Exception as e:
         print(f"A SNS error occurred: {repr(e)}")
